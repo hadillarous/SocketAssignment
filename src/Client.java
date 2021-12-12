@@ -21,6 +21,11 @@ public class Client {
         PrintWriter outClient = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
 
         // todo: implement the scenario
+        // Write message to the server
+        outClient.println("Squid game");
+        // Read a message from the server
+        String va=inClient.readLine();
+        System.out.println(va);
 
         //close in / out
         inClient.close();
